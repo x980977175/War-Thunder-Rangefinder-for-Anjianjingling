@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=c196cb2f-ae1e-4549-abec-a75dca9a3b4e
-Description=�ع�
+Description=»Ø¹ö
 Enable=1
 AutoRun=0
 [Repeat]
@@ -23,6 +23,7 @@ SetupOCXFile=
 [Comment]
 
 [Script]
+//快速回滚炮塔标尺
 MouseWheel 20
 Delay 50
 MouseWheel 20
