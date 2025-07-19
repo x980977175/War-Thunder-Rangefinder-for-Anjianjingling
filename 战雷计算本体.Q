@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=5d171f2b-e875-4b45-98d4-81e7b1591de6
-Description=Õ½À×¼ÆËã±¾Ìå
+Description=æˆ˜é›·è®¡ç®—æœ¬ä½“
 Enable=1
 AutoRun=0
 [Repeat]
@@ -27,131 +27,141 @@ UEsDBBQAAgAIAOBw8FrOsN3sKgAAAHIAAAAIABEAu8ax6i5ibXBVVA0ABySyd2hD5Hho0rF3aHPyLWKA
 
 
 [Script]
+//æŒ‰ä¸‹æŒ‰é”®åå¼€å§‹æ‰§è¡Œ
+//å°†ç«ç‚®æ ‡å°ºè°ƒæ•´ä¸º0
 MouseWheel 20
 Delay 50
 MouseWheel 20
 Delay 50
 MouseWheel 20
-// Õâ¸öneed_ver×÷Îª±¾½Å±¾ĞèÒªÊ¹ÓÃµÄ²å¼ş°æ±¾. Èç¹ûÒª»»²å¼şÊ±£¬¼ÇµÃ¸ü¸ÄÕâ¸öÖµ.
+//ä»¥ä¸‹ä¸ºå¤§æ¼ æ’ä»¶æ³¨å†Œ
+// è¿™ä¸ªneed_verä½œä¸ºæœ¬è„šæœ¬éœ€è¦ä½¿ç”¨çš„æ’ä»¶ç‰ˆæœ¬. å¦‚æœè¦æ¢æ’ä»¶æ—¶ï¼Œè®°å¾—æ›´æ”¹è¿™ä¸ªå€¼.
 need_ver = "3.1233"
-// ²å¼şĞèÒªÓÃµ½atlÏµÍ³¿â,ÓĞĞ©XP¾«¼òÏµÍ³»á°Ñatl.dll¾«¼òµô. ÎªÁË·ÀÖ¹×¢²áÊ§°Ü£¬ÕâÀïÊÖ¶¯×¢²áÒ»ÏÂatl.dll
+// æ’ä»¶éœ€è¦ç”¨åˆ°atlç³»ç»Ÿåº“,æœ‰äº›XPç²¾ç®€ç³»ç»Ÿä¼šæŠŠatl.dllç²¾ç®€æ‰. ä¸ºäº†é˜²æ­¢æ³¨å†Œå¤±è´¥ï¼Œè¿™é‡Œæ‰‹åŠ¨æ³¨å†Œä¸€ä¸‹atl.dll
 set ws=createobject("Wscript.Shell")
 ws.run "regsvr32 atl.dll /s"
 set ws=nothing
-// ÕâÀïÑ¡ÔñcÅÌµÄtest-_game×÷Îª²å¼şµÄ»ù±¾Ä¿Â¼ Ò²¾ÍÊÇSetPath¶ÔÓ¦µÄÄ¿Â¼¡£ËùÒÔËùÓĞ×ÊÔ´¶¼ÊÍ·ÅÔÚ´ËÄ¿Â¼.
+// è¿™é‡Œé€‰æ‹©cç›˜çš„test-_gameä½œä¸ºæ’ä»¶çš„åŸºæœ¬ç›®å½• ä¹Ÿå°±æ˜¯SetPathå¯¹åº”çš„ç›®å½•ã€‚æ‰€ä»¥æ‰€æœ‰èµ„æºéƒ½é‡Šæ”¾åœ¨æ­¤ç›®å½•.
 PutAttachment "c:\test_game","*.*"
-// ÕâÀïÒªÓÃµ½RegDllÀ´×¢²á²å¼ş£¬ËùÒÔ±ØĞëÊÍ·Åµ½Plugin. µ«ÊÇÇĞ¼Ç²»ÄÜ°Ñdm.dllÊÍ·Åµ½Plugin.ÄÇ»áµ¼ÖÂ²å¼şÊ§Ğ§.
+// è¿™é‡Œè¦ç”¨åˆ°RegDllæ¥æ³¨å†Œæ’ä»¶ï¼Œæ‰€ä»¥å¿…é¡»é‡Šæ”¾åˆ°Plugin. ä½†æ˜¯åˆ‡è®°ä¸èƒ½æŠŠdm.dllé‡Šæ”¾åˆ°Plugin.é‚£ä¼šå¯¼è‡´æ’ä»¶å¤±æ•ˆ.
 PutAttachment ".\Plugin" ,"RegDll.dll"
-// ²å¼ş×¢²á¿ªÊ¼>>>>>>>>>>>>>>>>>>>
-// ÏÂÃæ¿ªÊ¼×¢²á²å¼ş,ÏÈ³¢ÊÔÓÃRegDllÀ´×¢²á.ÕâÀï±ØĞëÊ¹ÓÃ¾ø¶ÔÂ·¾¶¡£ÒÔÃâÓĞ±ğÈË°Ñdm.dllÊÍ·ÅÔÚÏµÍ³Ä¿Â¼.Ôì³É°æ±¾´íÎó.
+// æ’ä»¶æ³¨å†Œå¼€å§‹>>>>>>>>>>>>>>>>>>>
+// ä¸‹é¢å¼€å§‹æ³¨å†Œæ’ä»¶,å…ˆå°è¯•ç”¨RegDllæ¥æ³¨å†Œ.è¿™é‡Œå¿…é¡»ä½¿ç”¨ç»å¯¹è·¯å¾„ã€‚ä»¥å…æœ‰åˆ«äººæŠŠdm.dllé‡Šæ”¾åœ¨ç³»ç»Ÿç›®å½•.é€ æˆç‰ˆæœ¬é”™è¯¯.
 Call Plugin.RegDll.Reg("c:\test_game\dm.dll") 
-// ÕâÀïÅĞ¶ÏÊÇ·ñ×¢²á³É¹¦
+// è¿™é‡Œåˆ¤æ–­æ˜¯å¦æ³¨å†ŒæˆåŠŸ
 set dm = createobject("dm.dmsoft")
 ver = dm.Ver()
 if ver <> need_ver then
-    // ÏÈÊÍ·ÅÏÈÇ°´´½¨µÄdm
+    // å…ˆé‡Šæ”¾å…ˆå‰åˆ›å»ºçš„dm
     set dm = nothing
-    // ÔÙ³¢ÊÔÓÃregsvr32 À´×¢²á. ÕâÀï±ØĞëÊ¹ÓÃ¾ø¶ÔÂ·¾¶¡£ÒÔÃâÓĞ±ğÈË°Ñdm.dllÊÍ·ÅÔÚÏµÍ³Ä¿Â¼.Ôì³É°æ±¾´íÎó.
+    // å†å°è¯•ç”¨regsvr32 æ¥æ³¨å†Œ. è¿™é‡Œå¿…é¡»ä½¿ç”¨ç»å¯¹è·¯å¾„ã€‚ä»¥å…æœ‰åˆ«äººæŠŠdm.dllé‡Šæ”¾åœ¨ç³»ç»Ÿç›®å½•.é€ æˆç‰ˆæœ¬é”™è¯¯.
     set ws=createobject("Wscript.Shell")
     ws.run "regsvr32 c:\test_game\dm.dll /s"
     set ws=nothing
     Delay 1500  
-    // ÔÙÅĞ¶Ï²å¼şÊÇ·ñ×¢²á³É¹¦
+    // å†åˆ¤æ–­æ’ä»¶æ˜¯å¦æ³¨å†ŒæˆåŠŸ
     set dm = createobject("dm.dmsoft")
     ver = dm.Ver()
     if ver <> need_ver then
-        // ÕâÊ±£¬ÒÑ¾­È·ÈÏ²å¼ş×¢²áÊ§°ÜÁË¡£ µ¯³öÒ»Ğ©µ÷ÊÔĞÅÏ¢£¬ÒÔ¹©·ÖÎö.
-        messagebox "²å¼ş°æ±¾´íÎó,µ±Ç°Ê¹ÓÃµÄ°æ±¾ÊÇ:"&ver&",²å¼şËùÔÚÄ¿Â¼ÊÇ:"&dm.GetBasePath()
-        messagebox "Çë¹Ø±Õ³ÌĞò,ÖØĞÂ´ò¿ª±¾³ÌĞòÔÙ³¢ÊÔ"
+        // è¿™æ—¶ï¼Œå·²ç»ç¡®è®¤æ’ä»¶æ³¨å†Œå¤±è´¥äº†ã€‚ å¼¹å‡ºä¸€äº›è°ƒè¯•ä¿¡æ¯ï¼Œä»¥ä¾›åˆ†æ.
+        messagebox "æ’ä»¶ç‰ˆæœ¬é”™è¯¯,å½“å‰ä½¿ç”¨çš„ç‰ˆæœ¬æ˜¯:"&ver&",æ’ä»¶æ‰€åœ¨ç›®å½•æ˜¯:"&dm.GetBasePath()
+        messagebox "è¯·å…³é—­ç¨‹åº,é‡æ–°æ‰“å¼€æœ¬ç¨‹åºå†å°è¯•"
         endscript
     end if
 end if
 TracePrint ver
+//åˆ›å»ºå¤§æ¼ æ’ä»¶ä¸­çš„foobarçª—å£ï¼Œç”¨æ¥æ˜¾ç¤ºè®¡ç®—ç»“æœ
 foobar = dm.CreateFoobarRect(hwnd,860,850,200,100)
-Global ×îÖÕ¾àÀë
-×îÖÕ¾àÀë = 0
+Global æœ€ç»ˆè·ç¦»
+æœ€ç»ˆè·ç¦» = 0
 Delay 700
-//ÏÂÃæÕâ¾äÊÇÏòÄ¿±êÎÄ¼ş("zb.txt")¶Á³öÎÄ±¾ÄÚÈİµ½±äÁ¿(Text)
+//ä¸‹é¢è¿™å¥æ˜¯å‘ç›®æ ‡æ–‡ä»¶("zb.txt")è¯»å‡ºæ–‡æœ¬å†…å®¹åˆ°å˜é‡(Text)
 Text = Plugin.File.ReadFileEx("zb.txt")
-TracePrint "ÏòÄ¿±êÎÄ¼ş¶Á³öÎÄ±¾ÄÚÈİÎª£º"& Text
+TracePrint "å‘ç›®æ ‡æ–‡ä»¶è¯»å‡ºæ–‡æœ¬å†…å®¹ä¸ºï¼š"& Text
 dim MyArray
-//»Ø³µ»»ĞĞ·û±»´¦Àí³É¹ÜµÀ·û | ÏÔÊ¾
+//å›è½¦æ¢è¡Œç¬¦è¢«å¤„ç†æˆç®¡é“ç¬¦ | æ˜¾ç¤º
 MyArray = Split(Text, "|")
 If UBound(MyArray)>=0 Then
     i=0
     For UBound(MyArray)
-        //ÏÂÃæÕâ¾äÊÇµÃµ½ÎÄ±¾ÄÚÈİ
-        TracePrint "µÚ " & i+1 &" ĞĞÎÄ±¾ÄÚÈİÎª£º"& Cstr(MyArray(i))
+        //ä¸‹é¢è¿™å¥æ˜¯å¾—åˆ°æ–‡æœ¬å†…å®¹
+        TracePrint "ç¬¬ " & i+1 &" è¡Œæ–‡æœ¬å†…å®¹ä¸ºï¼š"& Cstr(MyArray(i))
         i=i+1
     Next
 End If 
-Dim ÒÑ¾­Ñ­»·´ÎÊı,ÕÒÍ¼Ñ­»·´ÎÊı,ÊäÈë¿òÎÄ±¾,ÊäÈë¿òÎÄ±¾1
-ÕÒÍ¼Ñ­»·´ÎÊı = 0
-ÒÑ¾­Ñ­»·´ÎÊı = 1
-ÊäÈë¿òÎÄ±¾ = Cstr(MyArray(0))
-ÊäÈë¿òÎÄ±¾1 = Cstr(MyArray(1))
-FindPic 1581, 741, 1906, 1066, "Attachment:\×Ô¼º.bmp", 0.9, intX, intY
-TracePrint "ÕÒµ½µÄÎ»ÖÃÍ¼Æ¬×ø±êÔÚ" & intX & ", " & intY & ""
-While intX < 0 And ÕÒÍ¼Ñ­»·´ÎÊı < 5
-    FindPic 1581, 741, 1906, 1066, "Attachment:\×Ô¼º.bmp", 0.9, intX, intY
-    TracePrint "ÕÒµ½µÄÎ»ÖÃÍ¼Æ¬×ø±êÔÚ" & intX & ", " & intY & ""
-    ÕÒÍ¼Ñ­»·´ÎÊı = ÕÒÍ¼Ñ­»·´ÎÊı + 1
+Dim å·²ç»å¾ªç¯æ¬¡æ•°,æ‰¾å›¾å¾ªç¯æ¬¡æ•°,è¾“å…¥æ¡†æ–‡æœ¬,è¾“å…¥æ¡†æ–‡æœ¬1
+æ‰¾å›¾å¾ªç¯æ¬¡æ•° = 0
+å·²ç»å¾ªç¯æ¬¡æ•° = 1
+è¾“å…¥æ¡†æ–‡æœ¬ = Cstr(MyArray(0))
+è¾“å…¥æ¡†æ–‡æœ¬1 = Cstr(MyArray(1))
+//ä¸‹é¢å¼€å§‹æ‰¾å›¾ï¼Œé™„ä»¶é‡Œæ”¾å…¥â€œè‡ªå·±.bmpâ€å’Œâ€œé»„æ ‡.bmpâ€
+//æ‰¾åˆ°è‡ªå·±çš„åæ ‡åå†™å…¥intXå’ŒintY
+FindPic 1581, 741, 1906, 1066, "Attachment:\è‡ªå·±.bmp", 0.9, intX, intY
+TracePrint "æ‰¾åˆ°çš„ä½ç½®å›¾ç‰‡åæ ‡åœ¨" & intX & ", " & intY & ""
+While intX < 0 And æ‰¾å›¾å¾ªç¯æ¬¡æ•° < 5
+    FindPic 1581, 741, 1906, 1066, "Attachment:\è‡ªå·±.bmp", 0.9, intX, intY
+    TracePrint "æ‰¾åˆ°çš„ä½ç½®å›¾ç‰‡åæ ‡åœ¨" & intX & ", " & intY & ""
+    æ‰¾å›¾å¾ªç¯æ¬¡æ•° = æ‰¾å›¾å¾ªç¯æ¬¡æ•° + 1
 Wend
-ÕÒÍ¼Ñ­»·´ÎÊı = 0
-FindPic 1581, 741, 1906, 1066, "Attachment:\»Æ±ê.bmp", 1, intO, intP
-TracePrint "ÕÒµ½µÄÎ»ÖÃÍ¼Æ¬×ø±êÔÚ" & intO & ", " & intP & ""
-While intX < 0 And ÕÒÍ¼Ñ­»·´ÎÊı < 5
-    FindPic 1581, 741, 1906, 1066, "Attachment:\»Æ±ê.bmp", 1, intO, intP
-    TracePrint "ÕÒµ½µÄÎ»ÖÃÍ¼Æ¬×ø±êÔÚ" & intO & ", " & intP & ""
-    ÕÒÍ¼Ñ­»·´ÎÊı = ÕÒÍ¼Ñ­»·´ÎÊı + 1
+æ‰¾å›¾å¾ªç¯æ¬¡æ•° = 0
+//æ‰¾åˆ°é»„æ ‡çš„åæ ‡åå†™å…¥intOå’ŒintP
+FindPic 1581, 741, 1906, 1066, "Attachment:\é»„æ ‡.bmp", 1, intO, intP
+TracePrint "æ‰¾åˆ°çš„ä½ç½®å›¾ç‰‡åæ ‡åœ¨" & intO & ", " & intP & ""
+While intX < 0 And æ‰¾å›¾å¾ªç¯æ¬¡æ•° < 5
+    FindPic 1581, 741, 1906, 1066, "Attachment:\é»„æ ‡.bmp", 1, intO, intP
+    TracePrint "æ‰¾åˆ°çš„ä½ç½®å›¾ç‰‡åæ ‡åœ¨" & intO & ", " & intP & ""
+    æ‰¾å›¾å¾ªç¯æ¬¡æ•° = æ‰¾å›¾å¾ªç¯æ¬¡æ•° + 1
 Wend
-ÕÒÍ¼Ñ­»·´ÎÊı = 0
-Function ÇóÅ·Ê½¾àÀë(intX, intY, intO, intP)
-    ÇóÅ·Ê½¾àÀë = Sqr(((intX - intO) ^ 2) + ((intY - intP) ^ 2))
+æ‰¾å›¾å¾ªç¯æ¬¡æ•° = 0
+//è®¡ç®—è·ç¦»
+Function æ±‚æ¬§å¼è·ç¦»(intX, intY, intO, intP)
+    æ±‚æ¬§å¼è·ç¦» = Sqr(((intX - intO) ^ 2) + ((intY - intP) ^ 2))
 End Function
-Function ÇóÅ·Ê½¾àÀë1(intX, intY, intO, intP)
-    ÇóÅ·Ê½¾àÀë1 = Sqr(((intO - intX) ^ 2) + ((intP - intY) ^ 2))
+Function æ±‚æ¬§å¼è·ç¦»1(intX, intY, intO, intP)
+    æ±‚æ¬§å¼è·ç¦»1 = Sqr(((intO - intX) ^ 2) + ((intP - intY) ^ 2))
 End Function
-TracePrint ÇóÅ·Ê½¾àÀë(intX, intY, intO, intP)
-TracePrint ÇóÅ·Ê½¾àÀë1(intX, intY, intO, intP)
+TracePrint æ±‚æ¬§å¼è·ç¦»(intX, intY, intO, intP)
+TracePrint æ±‚æ¬§å¼è·ç¦»1(intX, intY, intO, intP)
 DIM O,P,U,I
-O = ÇóÅ·Ê½¾àÀë(intX, intY, intO, intP)
-P = ÇóÅ·Ê½¾àÀë1(intX, intY, intO, intP)
-U = 325 / ÊäÈë¿òÎÄ±¾1
-I = ÊäÈë¿òÎÄ±¾ / U
+O = æ±‚æ¬§å¼è·ç¦»(intX, intY, intO, intP)
+P = æ±‚æ¬§å¼è·ç¦»1(intX, intY, intO, intP)
+U = 325 / è¾“å…¥æ¡†æ–‡æœ¬1
+I = è¾“å…¥æ¡†æ–‡æœ¬ / U
 W = O * I
 Q = P * I
+//å¦‚æœå…¶ä¸­ä¸€ä¸ªçš„åæ ‡æ²¡æ‰¾åˆ°ï¼Œé‚£ä¹ˆè·³è¿‡æœ€ç»ˆè·ç¦»ç¡®è®¤
 If O > P and intO > 0 Then 
     TracePrint O * I / 100
-    ×îÖÕ¾àÀë = O * I +1
+    æœ€ç»ˆè·ç¦» = O * I +1
 ElseIf intO > 0 Then
     TracePrint P * I / 100
-    ×îÖÕ¾àÀë = P * I +1
+    æœ€ç»ˆè·ç¦» = P * I +1
 End If
-TracePrint ×îÖÕ¾àÀë
-dm_ret = dm.FoobarSetFont(foobar,"¿¬Ìå",25,2+4)
+TracePrint æœ€ç»ˆè·ç¦»
+dm_ret = dm.FoobarSetFont(foobar,"æ¥·ä½“",25,2+4)
 //Form1.InputBox1.Text =
-If ×îÖÕ¾àÀë < 100 Then 
+//æœ¬å¥—è‡ªåŠ¨è°ƒæ•´å‚æ•°æ˜¯ç»™PLZ-05çš„ï¼Œå…¶ä½™å’ŒPLZ-05ç›¸åŒæ ‡å°ºè°ƒæ•´å¹…åº¦çš„ä¹Ÿå¯ä»¥ç”¨ã€‚ä¹Ÿå¯ä»¥åˆ é™¤è°ƒæ•´éƒ¨åˆ†ï¼Œåªä¿ç•™è·ç¦»è®¡ç®—ã€‚
+If æœ€ç»ˆè·ç¦» < 100 Then 
     MouseWheel - 1 
-    dm_ret = dm.FoobarPrintText(foobar,×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½100","00adb5")
-ElseIf ×îÖÕ¾àÀë < 200 Then
+    dm_ret = dm.FoobarPrintText(foobar,æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°100","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 200 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar,×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½200","00adb5")
-ElseIf ×îÖÕ¾àÀë < 300 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar,æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°200","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 300 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½300","00adb5")
-ElseIf ×îÖÕ¾àÀë < 450 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°300","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 450 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -159,10 +169,10 @@ ElseIf ×îÖÕ¾àÀë < 450 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½450","00adb5")
-ElseIf ×îÖÕ¾àÀë < 550 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°450","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 550 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -172,10 +182,10 @@ ElseIf ×îÖÕ¾àÀë < 550 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½550","00adb5")
-ElseIf ×îÖÕ¾àÀë < 650 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°550","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 650 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -187,10 +197,10 @@ ElseIf ×îÖÕ¾àÀë < 650 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½650","00adb5")
-ElseIf ×îÖÕ¾àÀë < 800 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°650","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 800 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -204,10 +214,10 @@ ElseIf ×îÖÕ¾àÀë < 800 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½800","00adb5")
-ElseIf ×îÖÕ¾àÀë < 900 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°800","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 900 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -223,10 +233,10 @@ ElseIf ×îÖÕ¾àÀë < 900 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½900","00adb5")
-ElseIf ×îÖÕ¾àÀë < 1000 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°900","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 1000 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -244,10 +254,10 @@ ElseIf ×îÖÕ¾àÀë < 1000 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½1000","00adb5")
-ElseIf ×îÖÕ¾àÀë < 1100 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°1000","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 1100 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -267,10 +277,10 @@ ElseIf ×îÖÕ¾àÀë < 1100 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½1100","00adb5")
-ElseIf ×îÖÕ¾àÀë < 1200 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°1100","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 1200 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -292,10 +302,10 @@ ElseIf ×îÖÕ¾àÀë < 1200 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½1200","00adb5")
-ElseIf ×îÖÕ¾àÀë < 1350 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°1200","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 1350 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -319,10 +329,10 @@ ElseIf ×îÖÕ¾àÀë < 1350 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½1350","00adb5")
-ElseIf ×îÖÕ¾àÀë < 1450 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°1350","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 1450 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -348,10 +358,10 @@ ElseIf ×îÖÕ¾àÀë < 1450 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½1450","00adb5")
-ElseIf ×îÖÕ¾àÀë < 1550 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°1450","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 1550 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -379,10 +389,10 @@ ElseIf ×îÖÕ¾àÀë < 1550 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½1550","00adb5")
-ElseIf ×îÖÕ¾àÀë < 1650 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°1550","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 1650 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -412,10 +422,10 @@ ElseIf ×îÖÕ¾àÀë < 1650 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½1650","00adb5")
-ElseIf ×îÖÕ¾àÀë < 1750 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°1650","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 1750 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -447,10 +457,10 @@ ElseIf ×îÖÕ¾àÀë < 1750 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½1750","00adb5")
-ElseIf ×îÖÕ¾àÀë < 1850 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°1750","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 1850 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -484,10 +494,10 @@ ElseIf ×îÖÕ¾àÀë < 1850 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½1850","00adb5")
-ElseIf ×îÖÕ¾àÀë < 1950 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°1850","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 1950 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -523,10 +533,10 @@ ElseIf ×îÖÕ¾àÀë < 1950 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½1950","00adb5")
-ElseIf ×îÖÕ¾àÀë < 2050 Then
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°1950","00adb5")
+ElseIf æœ€ç»ˆè·ç¦» < 2050 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
@@ -564,8 +574,9 @@ ElseIf ×îÖÕ¾àÀë < 2050 Then
     MouseWheel - 1 
     Delay 50
     MouseWheel - 1 
-    TracePrint ×îÖÕ¾àÀë
-    dm_ret = dm.FoobarPrintText(foobar, ×îÖÕ¾àÀë, "00adb5")
-    dm_ret = dm.FoobarPrintText(foobar,"µ÷Õûµ½2050","00adb5")
+    TracePrint æœ€ç»ˆè·ç¦»
+    dm_ret = dm.FoobarPrintText(foobar, æœ€ç»ˆè·ç¦», "00adb5")
+    dm_ret = dm.FoobarPrintText(foobar,"è°ƒæ•´åˆ°2050","00adb5")
 End If
+//æ‰§è¡Œå®Œæˆä¸¤ç§’åå…³é—­è·ç¦»æ˜¾ç¤ºçª—å£
 Delay 2000
