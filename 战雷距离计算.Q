@@ -9,7 +9,7 @@ StopHotkeyMod=8
 RunOnce=1
 EnableWindow=
 MacroID=0a4d62e6-719c-40c7-a8a4-3600f7109124
-Description=Õ½À×¾àÀë¼ÆËã
+Description=æˆ˜é›·è·ç¦»è®¡ç®—
 Enable=1
 AutoRun=0
 [Repeat]
@@ -31,36 +31,37 @@ UEsDBBQAAgAIALap8lruH2YXogUAAAhEAAAJABEAVUlQYWNrYWdlVVQNAAcXuXpoF7l6aBe5emjtWstT
 
 
 [Script]
+//æŒ‰ä¸‹å¯åŠ¨æŒ‰é”®åè¾“å…¥å°åœ°å›¾æ ‡å°ºä»¥åŠåˆ†æˆäº†å¤šå°‘æ¡†ï¼ˆç²¾ç¡®åˆ°å°æ•°åä¸¤ä½æˆ–è€…æ›´è¯¦ç»†ï¼‰ã€‚å­˜å‚¨åˆ°æŒ‰é”®å°ç²¾çµæ ¹ç›®å½•ä¸‹zb.txtï¼Œä»¥å®Œæˆæ¯”ä¾‹å°ºç¡®è®¤ã€‚
 Call Plugin.File.DeleteFile("zb.txt")
-Global ±äÁ¿15, µ¯´°ÎÄ±¾,µ¯´°ÎÄ±¾1, x, y, µ±Ç°Â·¾¶, ÊäÈë¿òÎÄ±¾, ÊäÈë¿òÎÄ±¾1
-µ¯´°ÎÄ±¾ = InputBox("±ÈÀı³ß£º")
-µ¯´°ÎÄ±¾1 = InputBox("±ÈÀı³ß1£º")
-Form1.InputBox1.Text = µ¯´°ÎÄ±¾
-Form1.InputBox2.Text = µ¯´°ÎÄ±¾1
-ÊäÈë¿òÎÄ±¾ = Form1.InputBox1.Text
-ÊäÈë¿òÎÄ±¾1 = Form1.InputBox2.Text
-µ±Ç°Â·¾¶ = Plugin.Sys.GetDir(0)
-//¿í
+Global å˜é‡15, å¼¹çª—æ–‡æœ¬,å¼¹çª—æ–‡æœ¬1, x, y, å½“å‰è·¯å¾„, è¾“å…¥æ¡†æ–‡æœ¬, è¾“å…¥æ¡†æ–‡æœ¬1
+å¼¹çª—æ–‡æœ¬ = InputBox("æ¯”ä¾‹å°ºï¼š")
+å¼¹çª—æ–‡æœ¬1 = InputBox("æ¯”ä¾‹å°º1ï¼š")
+Form1.InputBox1.Text = å¼¹çª—æ–‡æœ¬
+Form1.InputBox2.Text = å¼¹çª—æ–‡æœ¬1
+è¾“å…¥æ¡†æ–‡æœ¬ = Form1.InputBox1.Text
+è¾“å…¥æ¡†æ–‡æœ¬1 = Form1.InputBox2.Text
+å½“å‰è·¯å¾„ = Plugin.Sys.GetDir(0)
+//å®½
 x = Plugin.GetSysInfo.GetScreenResolutionX()
-//¸ß
+//é«˜
 y = Plugin.GetSysInfo.GetScreenResolutionY()
-±¾ĞĞÄÚÈİ = Plugin.File.GetFileLength("zb.txt")
-×ø±êÎÄ¼ş = Plugin.File.OpenFile("zb.txt")
-Call Plugin.File.SeekFile(×ø±êÎÄ¼ş, ±¾ĞĞÄÚÈİ)
-Call Plugin.File.WriteLine(×ø±êÎÄ¼ş, "" & µ¯´°ÎÄ±¾ & ""& Chr(10) &"" & µ¯´°ÎÄ±¾1 & "")
-TracePrint "Ğ´Èë""" & intX & "," & intY & ""
-Call Plugin.File.CloseFile(×ø±êÎÄ¼ş) 
-//ÏÂÃæÕâ¾äÊÇÏòÄ¿±êÎÄ¼ş("zb.txt")¶Á³öÎÄ±¾ÄÚÈİµ½±äÁ¿(Text)
+æœ¬è¡Œå†…å®¹ = Plugin.File.GetFileLength("zb.txt")
+åæ ‡æ–‡ä»¶ = Plugin.File.OpenFile("zb.txt")
+Call Plugin.File.SeekFile(åæ ‡æ–‡ä»¶, æœ¬è¡Œå†…å®¹)
+Call Plugin.File.WriteLine(åæ ‡æ–‡ä»¶, "" & å¼¹çª—æ–‡æœ¬ & ""& Chr(10) &"" & å¼¹çª—æ–‡æœ¬1 & "")
+TracePrint "å†™å…¥""" & intX & "," & intY & ""
+Call Plugin.File.CloseFile(åæ ‡æ–‡ä»¶) 
+//ä¸‹é¢è¿™å¥æ˜¯å‘ç›®æ ‡æ–‡ä»¶("zb.txt")è¯»å‡ºæ–‡æœ¬å†…å®¹åˆ°å˜é‡(Text)
 Text = Plugin.File.ReadFileEx("zb.txt")
-TracePrint "ÏòÄ¿±êÎÄ¼ş¶Á³öÎÄ±¾ÄÚÈİÎª£º"& Text
+TracePrint "å‘ç›®æ ‡æ–‡ä»¶è¯»å‡ºæ–‡æœ¬å†…å®¹ä¸ºï¼š"& Text
 dim MyArray
-//»Ø³µ»»ĞĞ·û±»´¦Àí³É¹ÜµÀ·û | ÏÔÊ¾
+//å›è½¦æ¢è¡Œç¬¦è¢«å¤„ç†æˆç®¡é“ç¬¦ | æ˜¾ç¤º
 MyArray = Split(Text, "|")
 If UBound(MyArray)>=0 Then
     i=0
     For UBound(MyArray)
-        //ÏÂÃæÕâ¾äÊÇµÃµ½ÎÄ±¾ÄÚÈİ
-        TracePrint "µÚ " & i+1 &" ĞĞÎÄ±¾ÄÚÈİÎª£º"& Cstr(MyArray(i))
+        //ä¸‹é¢è¿™å¥æ˜¯å¾—åˆ°æ–‡æœ¬å†…å®¹
+        TracePrint "ç¬¬ " & i+1 &" è¡Œæ–‡æœ¬å†…å®¹ä¸ºï¼š"& Cstr(MyArray(i))
         i=i+1
     Next
 End If
